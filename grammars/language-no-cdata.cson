@@ -1,0 +1,20 @@
+scopeName: 'text.html.cdata'
+name: 'HTML (No CDATA)'
+fileTypes: [
+  'html'
+  'htm'
+]
+patterns: [
+  {
+    begin: '<!\\[CDATA\\['
+    end: '\\]\\]'
+    patterns: [
+      {
+        include: 'text.html.basic'
+      }
+    ]
+  }
+  {
+    include: 'text.html.basic'
+  }
+]
